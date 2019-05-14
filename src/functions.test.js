@@ -149,26 +149,20 @@ const onlyTheEvenIndexedSurvive = numbers => {
  *   score: 99
  * }
  */
-// const bestMoviesOfTheYear = movies.reduce((name, year) => {
-//   return name += year.movies
-// }, 0)
-
-
-const bestMoviesOfTheYear = (movie, year) => {
-  return movie
-    .filter(movie => movie.year === year && movie.score > 90)
-    .map(movie => movie.name)
-}
-
-// year.filter(year => year.length > 1977)
-// return name
+// const bestMoviesOfTheYear = (movie, year) => {
+//   return movie
+//     .filter(movie => movie.year === year && movie.score > 90)
+//     .map(movie => movie.name)
 // }
 
-// ['Gavin', 'Mark', 'Jason'].filter(name => name.length > 4)
-
-// const totalApples = people.reduce((total, person) => {
-//   return total += person.apples
-// }, 0)
+const bestMoviesOfTheYear = (movies, year) =>
+  const rv = movies
+    .filter(movie => {
+      return movie.year === year && movie.score > 90
+    })
+    .map(movie => {
+      return movie.name
+    })
 // // ...
 
 /*
@@ -178,6 +172,11 @@ const bestMoviesOfTheYear = (movie, year) => {
  */
 
 // ...
+const everyoneIsOdd = number => {
+return number.every(numbers =>
+}
+return number % 2 === 1
+})
 
 /*
  * Define a function findTheNeedle that accepts an array of
@@ -187,6 +186,12 @@ const bestMoviesOfTheYear = (movie, year) => {
 
 // ...
 
+const findTheNeedle = words => {
+  const rv = words.filter(word => {
+    return word.toLowerCase().includes('needle')
+  })
+  return rv[0]
+}
 /*
  * Define a function findTheNeedleIndex that accepts an array of
  * strings and returns the index of the string that contains
