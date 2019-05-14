@@ -153,13 +153,16 @@ const onlyTheEvenIndexedSurvive = numbers => {
 //   return name += year.movies
 // }, 0)
 
-bestMoviesOfTheYear[]
 
-const bestMoviesOfTheYear = year => {
-
-  year.filter(year => year.length > 1977)
-  return name
+const bestMoviesOfTheYear = (movie, year) => {
+  return movie
+    .filter(movie => movie.year === year && movie.score > 90)
+    .map(movie => movie.name)
 }
+
+// year.filter(year => year.length > 1977)
+// return name
+// }
 
 // ['Gavin', 'Mark', 'Jason'].filter(name => name.length > 4)
 
