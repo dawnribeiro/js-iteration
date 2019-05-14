@@ -63,6 +63,20 @@
  * }
  */
 
+
+
+const yelling = words => {
+  for (let i = 0; i < words.length; i++) {
+    // uppercase  logic 
+    words[i] = words[i].toUpperCase()
+  }
+  return words
+}
+// const yelling = words => {
+//     return words.map(word => word.toUpperCase()
+//     }
+
+
 // ...
 
 /**
@@ -71,7 +85,12 @@
  * numbers as an argument and returns a new array with all
  * the numbers multiplied by 2
  */
-
+const doubleTrouble = numbers => {
+  for (let i = 0; i < numbers.length; i++) {
+    numbers[i] = numbers[i] * 2
+  }
+  return numbers
+}
 // ...
 
 /*
@@ -80,6 +99,17 @@
  * suffixed with " is at index X" where X is the index of the element
  */
 
+let array = ['how', 'now', 'brown', 'cow']
+const stringyIndexes = array => {
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i] + ' is at index ' + i
+
+  }
+  return array
+
+}
+
+
 // ...
 
 /*
@@ -87,13 +117,23 @@
  * numbers and returns only the elements that are even
  */
 
+const onlyTheEvenSurvive = numbers => {
+  return numbers.filter(number => {
+    return number % 2 === 0
+  })
+}
+
 // ...
 
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
  */
-
+const onlyTheEvenIndexedSurvive = numbers => {
+  return numbers.filter((number, index) => {
+    return index % 2 === 0
+  })
+}
 // ...
 
 /*
@@ -109,8 +149,24 @@
  *   score: 99
  * }
  */
+// const bestMoviesOfTheYear = movies.reduce((name, year) => {
+//   return name += year.movies
+// }, 0)
 
-// ...
+bestMoviesOfTheYear[]
+
+const bestMoviesOfTheYear = year => {
+
+  year.filter(year => year.length > 1977)
+  return name
+}
+
+// ['Gavin', 'Mark', 'Jason'].filter(name => name.length > 4)
+
+// const totalApples = people.reduce((total, person) => {
+//   return total += person.apples
+// }, 0)
+// // ...
 
 /*
  * Define a function everyoneIsOdd that accepts an array of
@@ -302,15 +358,46 @@ test('onlyTheEvenIndexedSurvive', t => {
 
 test('Function Check', t => ensureDefined(t, 'bestMoviesOfTheYear'))
 test('bestMoviesOfTheYear', t => {
-  const movies = [
-    { name: 'The Grand Budapest Hotel', year: 2014, score: 91 },
-    { name: 'Birdman', year: 2014, score: 91 },
-    { name: 'Transformers: Age of Extinction', year: 2014, score: 18 },
-    { name: 'Rage', year: 2014, score: 14 },
-    { name: 'Get Out', year: 2017, score: 99 },
-    { name: 'Justice League', year: 2017, score: 40 },
-    { name: 'Ghost in the Shell', year: 2017, score: 46 },
-    { name: 'The Big Sick', year: 2017, score: 98 }
+  const movies = [{
+      name: 'The Grand Budapest Hotel',
+      year: 2014,
+      score: 91
+    },
+    {
+      name: 'Birdman',
+      year: 2014,
+      score: 91
+    },
+    {
+      name: 'Transformers: Age of Extinction',
+      year: 2014,
+      score: 18
+    },
+    {
+      name: 'Rage',
+      year: 2014,
+      score: 14
+    },
+    {
+      name: 'Get Out',
+      year: 2017,
+      score: 99
+    },
+    {
+      name: 'Justice League',
+      year: 2017,
+      score: 40
+    },
+    {
+      name: 'Ghost in the Shell',
+      year: 2017,
+      score: 46
+    },
+    {
+      name: 'The Big Sick',
+      year: 2017,
+      score: 98
+    }
   ]
 
   t.deepEqual(bestMoviesOfTheYear(movies, 2014), [
